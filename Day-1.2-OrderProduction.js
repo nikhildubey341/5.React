@@ -4,7 +4,7 @@ const placeorder = (callback) => {
         callback();
     }, 2000);
 };
-const statProduction = (callback) => {
+const startProduction = (callback) => {
     setTimeout(() => {
         console.log("Order is placed")
         callback();
@@ -60,7 +60,7 @@ const printReact = (callback) => {
 console.log("order is now going to take");
 placeorder(() => {
     console.log('pass to production');
-    statProduction(() => {
+    startProduction(() => {
         console.log('pass to Linux')
         printLinux(() => {
             console.log('pass to github')
